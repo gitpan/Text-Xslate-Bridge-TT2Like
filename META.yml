@@ -1,14 +1,14 @@
 ---
 abstract: 'TT2 Variable Method Clone For Text::Xslate'
 author:
-  - 'Daisuke Maki C<< <daisuke@endeworks.jp> >>'
+  - 'Copyright (c) 2010 Daisuke Maki C<< <daisuke@endeworks.jp> >>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.99'
-license: unknown
+generated_by: 'Module::Install version 1.00'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -19,5 +19,9 @@ no_index:
     - t
 requires:
   Scalar::Util: 0
-  Text::Xslate: 0.1030
-version: 0.00001
+  Text::Xslate: 0.1045
+  URI::Escape: 0
+  perl: 5.8.1
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.00002
