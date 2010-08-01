@@ -19,9 +19,8 @@ no_index:
     - t
 requires:
   Scalar::Util: 0
-  Text::Xslate: 0.1045
-  URI::Escape: 0
+  Text::Xslate: 0.1052
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.00003
+version: 0.00004
