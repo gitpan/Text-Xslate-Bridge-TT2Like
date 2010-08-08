@@ -4,10 +4,13 @@ use strict;
 use warnings;
 use base qw(Text::Xslate::Bridge);
 
-our $VERSION = '0.00004';
+our $VERSION = '0.00005';
 
 use Scalar::Util 'blessed';
 use Text::Xslate qw(uri_escape);
+
+our $TRUNCATE_LENGTH = 32;
+our $TRUNCATE_ADDON  = '...';
 
 __PACKAGE__->bridge(
     scalar => {
@@ -562,6 +565,25 @@ sub format_filter_factory {
         my $text = shift;
         $text = '' unless defined $text;
         return join("\n", map{ sprintf($format, $_) } split(/\n/, $text));
+    }
+}
+
+sub truncate_filter_factory {
+    my ($len, $char) = @_;
+    $len  = $TRUNCATE_LENGTH unless defined $len;
+    $char = $TRUNCATE_ADDON  unless defined $char;
+
+    # Length of char is the minimum length
+    my $lchar = length $char;
+    if ($len < $lchar) {
+        $char  = substr($char, 0, $len);
+        $lchar = $len;
+    }
+
+    return sub {
+        my $text = shift;
+        return $text if length $text <= $len;
+        return substr($text, 0, $len - $lchar) . $char;
     }
 }
 
