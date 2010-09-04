@@ -16,6 +16,7 @@ name: Text-Xslate-Bridge-TT2Like
 no_index:
   directory:
     - inc
+    - src
     - t
     - xt
 requires:
@@ -24,4 +25,4 @@ requires:
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.00006
+version: 0.00007
