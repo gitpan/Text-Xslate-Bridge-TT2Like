@@ -1,6 +1,11 @@
 Changes
 =======
 
+0.00009 - 15 Sep 2011
+    * No code changes.
+    * Add t/005_xss.t to validate we're safe from potential xss attacks
+      [https://github.com/lestrrat/Text-Xslate-Bridge-TT2Like/pull/1] (gfx)
+
 0.00008 - 11 May 2011
     * Now html_* and xml filters return strings that are prorperly
       marked as raw via Text::Xslate::html_builder()

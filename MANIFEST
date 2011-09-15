@@ -18,6 +18,7 @@ t/001_scalar.t
 t/002_array.t
 t/003_hash.t
 t/004_filters.t
+t/005_xss.t
 t/TT2LikeTest.pm
 xt/999_pod-coverage.t
 xt/999_pod.t
