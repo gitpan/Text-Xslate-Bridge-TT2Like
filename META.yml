@@ -21,8 +21,8 @@ no_index:
     - xt
 requires:
   Scalar::Util: 0
-  Text::Xslate: 0.1052
+  Text::Xslate: 1.3000
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.00009
+version: 0.00010
